@@ -24,10 +24,10 @@ public class ServiceVerticle extends AbstractVerticle {
           client.disconnect();
         }
         // does not work
-        //startFuture.fail(ar.cause());
+        startFuture.fail(ar.cause());
 
         // does work
-        startFuture.complete();
+        //startFuture.complete();
       } else {
         logger.error("THIS IS NEVER REACHED ON ERROR");
 

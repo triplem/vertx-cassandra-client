@@ -14,6 +14,7 @@ public class MainVerticle extends AbstractVerticle {
 
     vertx.deployVerticle("examples.ServiceVerticle", ar -> {
       if (ar.failed()) {
+        // this is not printed, if the future of ServiceVerticle fails
         logger.error("Could not start serviceVerticle", ar.cause());
       } else {
         logger.error("........................................");
